@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/runtime:2.0 AS dotnet-base
+FROM mcr.microsoft.com/dotnet/runtime:6.0 AS dotnet-base
 
 FROM node:16-bullseye-slim
 
