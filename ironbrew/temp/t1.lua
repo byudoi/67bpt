@@ -1,0 +1,2 @@
+local secret = ((function(b)IB_INLINING_START(true);local function xor(b,c)IB_INLINING_START(true);local d,e=1,0;while b>0 and c>0 do local f,g=b%2,c%2;if f~=g then e=e+d end;b,c,d=(b-f)/2,(c-g)/2,d*2 end;if b<c then b=c end;while b>0 do local f=b%2;if f>0 then e=e+d end;b,d=(b-f)/2,d*2 end;return e end;local c=""local e=string.sub;local h=string.char;local t = {} for j=0, 255 do local x=h(j);t[j]=x;t[x]=j;end;local f="\132\203\43" for g=1,#b do local x=(g-1) % 3+1 c=c..t[xor(t[e(b,g,g)],t[e(f, x, x)])];end;return c;end)("\229"))
+print(secret)
